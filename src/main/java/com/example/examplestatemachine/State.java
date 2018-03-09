@@ -1,14 +1,10 @@
 package com.example.examplestatemachine;
 
-public abstract class State {
-    protected StateContext sc;
-    protected boolean accept = false;
+public interface State {
+
+    void actionA();
     
-    public void actionA() {}
+    void actionB();
     
-    public void actionB() {}
-    
-    public boolean isAccept() {
-        return this.accept;
-    }
+    boolean isAccept();
 }
